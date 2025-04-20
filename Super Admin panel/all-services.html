@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Navbar</title>
+  <!--Font Manrope-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- <style>
+        .userpanel-dropdown {
+  position: relative;
+  display: block;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  padding: 10px 15px;
+  width: 100%;
+  text-align: left;
+}
+
+.dropdown-content {
+  display: none;
+  flex-direction: column;
+  padding-left: 20px;
+  background-color: #f8f8f8;
+}
+
+.userpanel-dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+.dropdown-content a {
+  padding: 8px 15px;
+  text-decoration: none;
+  color: #333;
+  display: block;
+  font-size: 0.95rem;
+}
+
+.dropdown-content a:hover {
+  background-color: #eee;
+}
+
+      </style> -->
+  <link rel="stylesheet" href="css/dashboard.css">
+  <!--Font Manrope-->
+</head>
+
+<body>
+  <nav>
+    <div class="navbar-wrapper">
+      <div class="navbar" id="navbar">
+        <!-- Left Side -->
+        <div class="logo">
+          <a href="index.html"><img src="assets/logos/logo.png" alt="Logo" /></a>
+        </div>
+
+        <!-- Hamburger -->
+        <!-- <button class="hamburger" id="hamburger">&#9776;</button> -->
+
+        <!-- Middle Nav Links -->
+        <!-- <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Trust & Safety</a></li>
+          <li><a href="Categories.html">Quality Guide</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul> -->
+
+        <!-- Right Side Buttons -->
+        <div class="nav-buttons">
+          <!-- <button>Exit</button> -->
+          <!-- <button>Join</button> -->
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main content start here----------------------- -->
+  <!-- Hamburger Menu -->
+
+
+  <div class="userpanel-wrapper">
+    <aside class="userpanel-sidebar">
+      <h2 class="userpanel-sidebar-title">Hi Super Admin</h2>
+      <nav class="userpanel-nav">
+        <a href="dashboard.html" class="userpanel-link">Dashboard</a>
+        <a href="inbox.html" class="userpanel-link">Inbox</a>
+
+        <!-- Service Approvals Dropdown -->
+        <div class="userpanel-dropdown">
+          <button class="userpanel-link dropdown-toggle">Service Approvals</button>
+          <div class="dropdown-content">
+            <a href="new-listing-approvals.html">New Listings</a>
+            <a href="listing-modification-request.html">Modifications Requests</a>
+          </div>
+        </div>
+        <!-- User Management Dropdown -->
+        <div class="userpanel-dropdown">
+          <button class="userpanel-link dropdown-toggle">User Management</button>
+          <div class="dropdown-content">
+            <a href="client-management.html">Client Management</a>
+            <a href="provider-management.html">Provider Management</a>
+            <a href="admin-management.html">Admin Management</a>
+          </div>
+        </div>
+        <!-- Service Management -->
+        <div class="userpanel-dropdown">
+          <button class="userpanel-link dropdown-toggle">Service Management</button>
+          <div class="dropdown-content">
+            <a href="all-services.html">All Services</a>
+            <a href="add-service.html">Add Service</a>
+            <a href="manage-services.html">Manage Service</a>
+          </div>
+        </div>
+        <!-- Service Management -->
+        <div class="userpanel-dropdown">
+          <button class="userpanel-link dropdown-toggle">Categories Management</button>
+          <div class="dropdown-content">
+            <a href="all-categories.html">All Categories</a>
+            <a href="add-categories.html">Add Categories</a>
+            <a href="manage-categories.html">Manage Categories</a>
+          </div>
+        </div>
+
+        <!-- Transaction & Earnings -->
+        <div class="userpanel-dropdown">
+          <button class="userpanel-link dropdown-toggle">Transaction & Earnings</button>
+          <div class="dropdown-content">
+            <a href="all-transactions.html">All Transactions</a>
+            <!-- <a href="revenue-insights.html">Revenue Insights</a> -->
+            <!-- <a href="refunds.html">Refund Management</a>  -->
+            <!-- <a href="withdraw-requests.html">Withdraw Requests</a> -->
+            <!-- <a href="payment-settings.html">Payment Gateway Settings</a> -->
+          </div>
+        </div>
+        <!-- Notifications -->
+        <div class="userpanel-dropdown">
+          <button class="userpanel-link dropdown-toggle">Notifications</button>
+          <div class="dropdown-content">
+            <a href="notification.html">Notifications</a>
+            <a href="broadcast-notification.html">Broadcast Notification</a>
+            <a href="newsletter.html">Newsletter</a>
+          </div>
+        </div>
+
+        <!-- Website Management -->
+        <div class="userpanel-dropdown">
+          <button class="userpanel-link dropdown-toggle">Website Management</button>
+          <div class="dropdown-content">
+            <a href="home-page.html">Home Page</a>
+            <a href="service-page.html">Services Page</a>
+            <a href="categories-page.html">Categories Page</a>
+            <a href="about-page.html">About Page</a>
+            <a href="contact-page.html">Contact Page</a>
+            <a href="header-footer-page.html">Footer/Header Editor</a>
+            <a href="seo-&-meta-data.html">SEO & Meta Tags Settings</a>
+          </div>
+        </div>
+        <div class="userpanel-dropdown">
+          <button class="userpanel-link dropdown-toggle">Client Admin Panel Management</button>
+          <div class="dropdown-content">
+            <a href="client-dashboard.html">Dashboard(Home Page)</a>
+            <a href="client-inbox.html">Inbox</a>
+            <a href="client-bookings.html">Bookings</a>
+            <a href="client-tracking.html">Tracking</a>
+            <a href="client-profile.html">Profile</a>
+            <a href="client-payments.html">Payments</a>
+            <a href="client-notification.html">Notifications</a>
+          </div>
+        </div>
+
+        <div class="userpanel-dropdown">
+          <button class="userpanel-link dropdown-toggle">Provider Admin Panel Management</button>
+          <div class="dropdown-content">
+            <a href="provider-dashboard.html">Dashboard(Home Page)</a>
+            <a href="provider-inbox.html">Inbox</a>
+            <a href="provider-bookings.html">Bookings</a>
+            <a href="provider-analytics.html">Analytics</a>
+            <a href="provider-listing.html">Listing</a>
+            <a href="provider-notifications.html">Notifications</a>
+            <a href="provider-earnings.html">Earnings</a>
+            <a href="provider-profile.html">Profile</a>
+          </div>
+        </div>
+
+        <!-- System Settings -->
+        <div class="userpanel-dropdown">
+          <button class="userpanel-link dropdown-toggle">Blog Management</button>
+          <div class="dropdown-content">
+            <a href="add-new-blog.html">Add new Blog</a>
+            <a href="all-blogs.html">All Blogs</a>
+            <a href="blog-categories.html">Blog Categories</a>
+          </div>
+
+
+
+          <!-- Logout -->
+          <a href="#" class="userpanel-link">Logout</a>
+      </nav>
+    </aside>
+
+
+    <main class="userpanel-main">
+        <div class="service-management">
+            <h2>All Services</h2>
+          
+            <div class="admin-search">
+                <input type="text" placeholder="Search by name, email, or service..." />
+                <button>Search</button>
+              </div>
+          
+            <div class="table-responsive">
+              <table class="service-table" id="serviceTable">
+                <thead>
+                  <tr>
+                    <th>Image</th>
+                    <th>Title</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><img src="assets/services/service-card.jpg" alt="Service" class="service-img" /></td>
+                    <td>Home Cleaning</td>
+                    <td>Cleaning</td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut officia eaque cum repudiandae expli</td>
+                    <td><span class="status-active">Active</span></td>
+                    <td>
+                      <button class="view">View</button>
+                      <button class="edit">Edit</button>
+                      <button class="delete">Delete</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><img src="assets/services/service-card.jpg" alt="Service" class="service-img" /></td>
+                    <td>Plumbing Repair</td>
+                    <td>Plumbing</td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut officia eaque cum repudiandae expli</td>
+
+                    <td><span class="status-inactive">Inactive</span></td>
+                    <td>
+                      <button class="view">View</button>
+                      <button class="edit">Edit</button>
+                      <button class="delete">Delete</button>
+                    </td>
+                  </tr>
+                  <!-- More rows -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+          
+        
+
+    </main>
+  </div>
+
+  <!--Footer start section-->
+
+  <footer class="footer-container">
+    <div class="footer-inner">
+      <div class="footer-bottom">
+        <div class="footer-logo-text">
+          <img src="assets/logos/logo_footer.png" alt="LocalPro Logo" class="footer-logo" />
+          <p>© LocalPro Limited, 2025</p>
+        </div>
+
+        <div class="social-icons">
+          <span><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></span>
+          <span> <a href="#" target="_blank"><i class="fab fa-twitter"></i></a></span>
+          <span> <a href="#" target="_blank"><i class="fab fa-instagram"></i></a></span>
+          <span> <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></span>
+          <span> <a href="#" target="_blank"><i class="fab fa-youtube"></i></a></span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+
+  <script src="Js/navbar.js"></script>
+  <script src="Js/sidebar.js"></script>
+</body>
+
+</html>

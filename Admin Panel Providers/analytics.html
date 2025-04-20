@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Navbar</title>
+      <!--Font Manrope-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+      <link rel="stylesheet" href="css/styles.css">
+      <link rel="stylesheet" href="css/dashboard.css">
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js Library -->
+      <!--Font Manrope-->
+</head>
+<body>
+  <nav>
+    <div class="navbar-wrapper">
+      <div class="navbar" id="navbar">
+        <!-- Left Side -->
+        <div class="logo">
+          <a href="index.html"><img src="assets/logos/logo.png" alt="Logo" /></a>
+        </div>
+
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger">&#9776;</button>
+
+        <!-- Middle Nav Links -->
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="Categories.html">Categories</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Right Side Buttons -->
+        <div class="nav-buttons">
+            <button>Exit</button>
+            <!-- <button>Join</button> -->
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main content start here----------------------- -->
+<!-- Hamburger Menu -->
+
+
+  <div class="userpanel-wrapper">
+    <aside class="userpanel-sidebar">
+      <h2 class="userpanel-sidebar-title">Hi Username</h2>
+      <nav class="userpanel-nav">
+        <a href="dashboard.html" class="userpanel-link">Dashboard</a>
+        <a href="inbox.html" class="userpanel-link">Inbox</a>
+        <a href="analytics.html" class="userpanel-link">Analytics</a>
+        <a href="listings.html" class="userpanel-link">Listing</a>
+        <a href="notifications.html" class="userpanel-link">Notifications</a>
+        <a href="earnings.html" class="userpanel-link">Earnings</a>
+        <a href="profile.html" class="userpanel-link">Profile</a>
+        <a href="#" class="userpanel-link">Logout</a>
+      </nav>
+    </aside>
+
+    <main class="userpanel-main">
+
+        <div class="analytics-wrapper">
+            <h2>Analytics</h2>
+        
+            <div class="metrics-grid">
+              <div class="metric-card">
+                <h4>Total Users</h4>
+                <p>1,245</p>
+              </div>
+              <div class="metric-card">
+                <h4>Total Bookings</h4>
+                <p>1,750</p>
+              </div>
+              <div class="metric-card">
+                <h4>Total Earnings</h4>
+                <p>$23,500</p>
+              </div>
+            </div>
+        
+            <div class="charts-container">
+                <div class="chart-card">
+                  <h4>Revenue Over 6 Months</h4>
+                  <canvas id="modernRevenueChart"></canvas>
+                </div>
+              
+                <div class="chart-card">
+                  <h4>Weekly Bookings</h4>
+                  <canvas id="modernBookingChart"></canvas>
+                </div>
+              </div>
+              
+
+         
+    </main>
+
+  </div>
+
+    <!--Footer start section-->
+
+    <footer class="footer-container">
+        <div class="footer-inner">
+          <div class="footer-bottom">
+            <div class="footer-logo-text">
+              <img src="assets/logos/logo_footer.png" alt="LocalPro Logo" class="footer-logo" />
+              <p>© LocalPro Limited, 2025</p>
+            </div>
+    
+            <div class="social-icons">
+              <span><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></span>
+              <span>  <a href="#" target="_blank"><i class="fab fa-twitter"></i></a></span>
+              <span>  <a href="#" target="_blank"><i class="fab fa-instagram"></i></a></span>
+              <span>  <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></span>
+              <span>  <a href="#" target="_blank"><i class="fab fa-youtube"></i></a></span>
+            </div>
+          </div>
+          
+        </div>
+      </footer>
+    
+    
+    
+      <script src="js/analytics.js"></script>
+    <script src="Js/navbar.js"></script>
+    <script src="Js/sidebar.js"></script>
+    <script src="Js/pagination.js"></script>
+    </body>
+    </html>

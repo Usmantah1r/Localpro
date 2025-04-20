@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Navbar</title>
+      <!--Font Manrope-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+      <link rel="stylesheet" href="css/styles.css">
+      <link rel="stylesheet" href="css/dashboard.css">
+      <!--Font Manrope-->
+</head>
+<body>
+  <nav>
+    <div class="navbar-wrapper">
+      <div class="navbar" id="navbar">
+        <!-- Left Side -->
+        <div class="logo">
+          <a href="index.html"><img src="assets/logos/logo.png" alt="Logo" /></a>
+        </div>
+
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger">&#9776;</button>
+
+        <!-- Middle Nav Links -->
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Trust & Safety</a></li>
+          <li><a href="Categories.html">Quality Guide</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Right Side Buttons -->
+        <div class="nav-buttons">
+          <button>Exit</button>
+          <!-- <button>Join</button> -->
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main content start here----------------------- -->
+<!-- Hamburger Menu -->
+
+
+  <div class="userpanel-wrapper">
+    <aside class="userpanel-sidebar">
+      <h2 class="userpanel-sidebar-title">Hi Username</h2>
+      <nav class="userpanel-nav">
+        <a href="dashboard.html" class="userpanel-link">Dashboard</a>
+        <a href="inbox.html" class="userpanel-link">Inbox</a>
+        <a href="analytics.html" class="userpanel-link">Analytics</a>
+        <a href="listings.html" class="userpanel-link">Listing</a>
+        <a href="notifications.html" class="userpanel-link">Notifications</a>
+        <a href="earnings.html" class="userpanel-link">Earnings</a>
+        <a href="profile.html" class="userpanel-link">Profile</a>
+        <a href="#" class="userpanel-link">Logout</a>
+      </nav>
+    </aside>
+
+    <main class="userpanel-main">
+        
+        <div class="adminpanel-main">
+            <h1 class="adminpanel-heading">Message</h1>
+            <div class="chat-container">
+              <!-- Left: User list -->
+              <div class="chat-users">
+                <div class="chat-user active" onclick="switchUser(this)">Alex</div>
+                <div class="chat-user" onclick="switchUser(this)">Sarah</div>
+                <div class="chat-user" onclick="switchUser(this)">John</div>
+              </div>
+                        
+              <!-- Right: Chat window -->
+              <div class="chat-box">
+                <!-- Added top bar -->
+                <div class="chat-header">
+                  <div class="active-user">Alex</div>
+                  <div class="chat-actions">
+                    <!-- <span class="chat-action">&#128269;</span> Search icon -->
+                    <span class="chat-action">&#8942;</span> <!-- More options -->
+                  </div>
+                </div>
+                
+                <div class="chat-messages" id="chat-messages">
+                  <div class="chat-message received">
+                    Hello Admin!
+                    <div class="message-time">10:05 AM</div>
+                  </div>
+                  <div class="chat-message sent">
+                    Hi Alex, how can I help you?
+                    <div class="message-time">10:06 AM</div>
+                  </div>
+                </div>
+                                
+                <div class="chat-input-wrapper">
+                  <input type="text" id="chat-input" placeholder="Type a message...">
+                  <button onclick="sendMessage()">Send</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+    </main>
+  </div>
+  
+    <!--Footer start section-->
+
+    <footer class="footer-container">
+        <div class="footer-inner">
+          <div class="footer-bottom">
+            <div class="footer-logo-text">
+              <img src="assets/logos/logo_footer.png" alt="LocalPro Logo" class="footer-logo" />
+              <p>© LocalPro Limited, 2025</p>
+            </div>
+    
+            <div class="social-icons">
+              <span><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></span>
+              <span>  <a href="#" target="_blank"><i class="fab fa-twitter"></i></a></span>
+              <span>  <a href="#" target="_blank"><i class="fab fa-instagram"></i></a></span>
+              <span>  <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></span>
+              <span>  <a href="#" target="_blank"><i class="fab fa-youtube"></i></a></span>
+            </div>
+          </div>
+          
+        </div>
+      </footer>
+    
+    
+      <script>
+        function sendMessage() {
+          const input = document.getElementById('chat-input');
+          const message = input.value.trim();
+          if (message) {
+            const msgDiv = document.createElement('div');
+            msgDiv.className = 'chat-message sent';
+            
+            // Message content
+            msgDiv.innerText = message;
+            
+            // Add timestamp
+            const timeDiv = document.createElement('div');
+            timeDiv.className = 'message-time';
+            const now = new Date();
+            timeDiv.innerText = now.getHours().toString().padStart(2, '0') + ':' + 
+                                now.getMinutes().toString().padStart(2, '0');
+            
+            msgDiv.appendChild(timeDiv);
+            document.getElementById('chat-messages').appendChild(msgDiv);
+            input.value = '';
+            document.getElementById('chat-messages').scrollTop = document.getElementById('chat-messages').scrollHeight;
+          }
+        }
+        
+        function switchUser(elem) {
+          // Update active user class
+          document.querySelectorAll('.chat-user').forEach(u => u.classList.remove('active'));
+          elem.classList.add('active');
+          
+          // Update chat header with selected username
+          const username = elem.innerText;
+          document.querySelector('.active-user').innerText = username;
+          
+          // Clear chat history
+          document.getElementById('chat-messages').innerHTML = '';
+          
+          // Add a welcome message based on the selected user
+          const msgDiv = document.createElement('div');
+          msgDiv.className = 'chat-message received';
+          msgDiv.innerText = `Hello Admin, this is ${username}!`;
+          
+          const timeDiv = document.createElement('div');
+          timeDiv.className = 'message-time';
+          const now = new Date();
+          timeDiv.innerText = now.getHours().toString().padStart(2, '0') + ':' + 
+                             now.getMinutes().toString().padStart(2, '0');
+          
+          msgDiv.appendChild(timeDiv);
+          document.getElementById('chat-messages').appendChild(msgDiv);
+        }
+        
+        // Press Enter to send
+        document.getElementById('chat-input').addEventListener('keypress', function(e) {
+          if (e.key === 'Enter') {
+            sendMessage();
+          }
+        });
+      </script>
+        
+      
+      
+    
+    
+    <script src="Js/navbar.js"></script>
+    <script src="Js/sidebar.js"></script>
+    <script src="Js/pagination.js"></script>
+    </body>
+    </html>
